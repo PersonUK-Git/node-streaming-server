@@ -1,0 +1,10 @@
+<%- include("partials/header"); -%>
+
+<h1 class="pg-title">Photos</h1>
+<%- include("partials/form_image"); -%>
+<% images.forEach(function(image) { %>
+    <img src="/public/vids/images/<=%image %>" alt="<%= image %>">
+    <a href="/download?file=<%= encodeURIComponent(image) %>">Download</a>
+  <% }); %>
+
+<%- include("partials/footer"); -%>

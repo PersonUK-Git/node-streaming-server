@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+<%- include("partials/form"); -%>
+<h1 class="pg-title">videos</h1>
+<% videos.forEach(function(video) { %>
+        <video width="auto" height="240" controls>
+            <source src="/files/images/<%= video %>" type="video/mp4">
+        </video>
+        <a href="/download?file=<%= encodeURIComponent(video) %>">Download</a>
+        <a href="/player"><%= video %></a>
+        <h1> <%= video %> </h1>
+        <% }); %>
+<div>
+   
+</div>
+
+
+<%- include("partials/footer"); -%>
+

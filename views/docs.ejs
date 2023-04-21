@@ -1,0 +1,11 @@
+<%- include("partials/header"); -%>
+
+<h1 class="pg-title">Documents</h1>
+
+<%- include("partials/form"); -%>
+<ul>
+    <% for (var i = 0; i < docs.length; i++) { %>
+      <li><%= docs[i] %></li> <a href="/download?file=<%= encodeURIComponent(docs[i]) %>">Download</a>
+    <% } %>
+  </ul>
+<%- include("partials/footer"); -%>
