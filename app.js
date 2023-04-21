@@ -39,7 +39,7 @@ app.use(passport.session());
 
 
 // MONGODB CONNECTION
-mongoose.connect("mongodb+srv://Person_UK:Prateek006@cluster0.qznrmoc.mongodb.net/mbDB", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb://localhost:2701/myDB", { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema({
